@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    tools:context=".activity.DetailActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/ci_user_photo"
+                android:id="@+id/detail_user_photo"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_gravity="center_horizontal"
@@ -34,6 +34,7 @@
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:textSize="24sp"
@@ -41,9 +42,10 @@
                 android:text="@string/detail_nama_user"/>
 
             <TextView
-                android:id="@+id/tv_username"
+                android:id="@+id/tv_users"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="10dp"
@@ -61,7 +63,8 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/tv_follower_number"
+                        android:id="@+id/tv_follower_counts"
+                        android:fontFamily="@font/poppins"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="1"
@@ -71,6 +74,7 @@
 
                     <TextView
                         android:id="@+id/tv_follower_text"
+                        android:fontFamily="@font/poppins"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="1"
@@ -80,8 +84,9 @@
                         android:text="@string/followers" />
 
                     <TextView
-                        android:id="@+id/tv_following_number"
+                        android:id="@+id/tv_following_counts"
                         android:layout_width="wrap_content"
+                        android:fontFamily="@font/poppins"
                         android:layout_height="wrap_content"
                         android:layout_column="1"
                         android:layout_marginEnd="4dp"
@@ -92,6 +97,7 @@
                         android:id="@+id/tv_following_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
                         android:layout_column="1"
                         android:layout_marginEnd="4dp"
                         android:gravity="center"
@@ -107,13 +113,12 @@
                 android:layout_gravity="center"/>
 
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/detail_tabs"
+                android:id="@+id/tab_followlists"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabTextColor="@color/black"/>
+                android:layout_height="wrap_content" />
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/detail_view_pager"
+                android:id="@+id/detail_viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="450dp" />
         </LinearLayout>

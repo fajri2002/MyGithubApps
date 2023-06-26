@@ -1,15 +1,16 @@
-package com.example.mygithubapps
+package com.example.mygithubapps.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mygithubapps.adapter.ListUsersAdapter
 import com.example.mygithubapps.databinding.ActivityMainBinding
+import com.example.mygithubapps.response.ItemsItem
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,5 +1,6 @@
-package com.example.mygithubapps
+package com.example.mygithubapps.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 
@@ -7,8 +8,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.example.mygithubapps.activity.DetailActivity
+import com.example.mygithubapps.R
+import com.example.mygithubapps.response.ItemsItem
 
 class ListUsersAdapter(private val listUserGithub: List<ItemsItem>): RecyclerView.Adapter<ListUsersAdapter.ViewHolder>() {
 
@@ -30,7 +33,11 @@ class ListUsersAdapter(private val listUserGithub: List<ItemsItem>): RecyclerVie
             .circleCrop()
             .into(holder.imgPhoto)
 
-
+        holder.itemView.setOnClickListener{
+            val intentDetailUser = Intent(holder.itemView.context, DetailActivity::class.java)
+            intentDetailUser.putExtra(DetailActivity.EXTRA_USER, gitUsers.login)
+            holder.itemView.context.startActivity(intentDetailUser)
+        }
     }
 
 
